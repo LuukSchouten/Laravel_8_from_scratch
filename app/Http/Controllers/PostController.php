@@ -9,7 +9,6 @@ class PostController extends Controller
 {
     public function index()
     {
-
         return view('Home', [
             'posts' => Post::latest()->filter(request(['search']))->get(),
             'categories' => Category::all()
